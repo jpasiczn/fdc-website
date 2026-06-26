@@ -1273,7 +1273,7 @@
             A stronger<br><em>foundation</em><br>for your smile.
           </h1>
           <p class="hero-sub">
-            Advanced implant and restorative dentistry for patients who deserve a real plan — not a sales pitch. Doctor-led, thoughtfully designed, and built to last.
+            Advanced implant and restorative dentistry for patients who deserve a real plan — built with clinical depth, honest guidance, and your long-term health in mind.
           </p>
           <div class="hero-actions">
             <button class="btn-primary" onclick="scrollToBooking()">Schedule a Consultation</button>
@@ -1416,7 +1416,7 @@
             Foundation Dental Center was created to give this community something different: a local, accountable, clinically serious dental home that does not feel corporate. A place built for patients who need real answers and a trusted path forward.
           </p>
           <p class="about-body">
-            Every case is doctor-led from the first consultation to the final restoration — starting with listening, not selling, and reflecting your anatomy, your goals, and your life.
+            Every case is managed by Dr. Pasicznyk from the first consultation to the final restoration. Your plan reflects your anatomy, your goals, and your timeline — not a protocol.
           </p>
           <div class="about-signature">
             <div class="about-sig-avatar" aria-hidden="true">
@@ -1628,7 +1628,7 @@
           </div>
           <div>
             <h3 class="step-title">Restore &amp; Maintain</h3>
-            <p class="step-text">We complete treatment and stay with you long-term. Our goal is a result that holds — and a patient who never has to start over.</p>
+            <p class="step-text">We complete treatment and stay with you long-term. Our goal is a result that holds — and a patient who does not have to start over.</p>
           </div>
         </div>
       </div>
@@ -1704,10 +1704,10 @@
             Your foundation<br>starts <em>here.</em>
           </h2>
           <p class="cta-body">
-            A consultation is not a commitment. It is a conversation — one where we listen first, answer your questions honestly, and map a clear path forward. No pressure. No packages. Just real guidance from a doctor who cares about doing this right.
+            A consultation is a conversation, not a commitment. We listen first, explain what we find, and give you clear options — so you understand what is possible before making any decisions.
           </p>
           <p class="cta-body" style="margin-top:18px;">
-            Whatever you are dealing with — failing teeth, loose dentures, missing teeth, years of patchwork dentistry — there is a plan for you. We are ready to build it together.
+            Whatever you are dealing with — failing teeth, loose dentures, missing teeth, years of patchwork dentistry — there is a path forward. We are ready to help you find it.
           </p>
           <blockquote style="margin-top:36px; border-left:2px solid var(--brass); padding-left:24px;">
             <p style="font-family:var(--serif); font-size:19px; font-style:italic; font-weight:400; line-height:1.6; color:rgba(246,241,231,0.8);">
@@ -1721,7 +1721,7 @@
 
         <div class="cta-right fade-up delay-2" id="booking">
           <h3 class="cta-form-label">Schedule Your Consultation</h3>
-          <p class="cta-form-sub">We will respond within one business day to confirm your appointment.</p>
+          <p class="cta-form-sub">Start with a conversation. We will help you understand what is possible before asking you to make any decisions.</p>
 
           <form class="cta-form" onsubmit="handleFormSubmit(event)" novalidate>
             <div class="form-field">
@@ -1753,7 +1753,7 @@
               <label for="message">Anything else you'd like us to know</label>
               <textarea id="message" name="message" placeholder="Optional — share any details that would help us prepare for your visit"></textarea>
             </div>
-            <button type="submit" class="form-submit">Request My Consultation</button>
+            <button type="submit" class="form-submit">Schedule a Consultation</button>
             <p class="form-privacy">Your information is kept private and used only to respond to your request. We will contact you to confirm your appointment time.</p>
           </form>
         </div>
@@ -1770,7 +1770,6 @@
           <span class="section-label">Find Us</span>
           <h2 class="location-name">Foundation Dental Center</h2>
           <p class="location-address">
-            Bonita Springs, Florida<br>
             26811 South Bay Drive, Suite 200<br>
             Bonita Springs, FL 34134<br>
             <a href="tel:+12399461881" style="color:var(--brass); border-bottom: 1px solid rgba(178,136,77,0.3);">(239) 946-1881</a><br>
@@ -1794,7 +1793,7 @@
         </div>
 
         <div class="location-action">
-          <button class="btn-primary" onclick="scrollToBooking()">Book Online</button>
+          <button class="btn-primary" onclick="scrollToBooking()">Schedule a Consultation</button>
         </div>
       </div>
     </div>
@@ -1904,19 +1903,6 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Testimonial carousel (placeholder for future slides)
-    let currentSlide = 0;
-    function goToSlide(idx) {
-      const track = document.getElementById('testimonialsTrack');
-      const dots = document.querySelectorAll('.t-dot');
-      currentSlide = idx;
-      track.style.transform = `translateX(-${idx * 100}%)`;
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === idx);
-        d.setAttribute('aria-selected', i === idx);
-      });
-    }
 
     // Form submission handler (replace with real endpoint)
     function handleFormSubmit(e) {
