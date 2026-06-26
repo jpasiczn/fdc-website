@@ -819,105 +819,6 @@
     }
 
     /* ─── TESTIMONIALS ───────────────────────────────────── */
-    #testimonials {
-      background: var(--navy-deep);
-      padding: 120px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .testimonials-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(93,119,133,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .testimonials-header {
-      text-align: center;
-      margin-bottom: 72px;
-      position: relative;
-    }
-    .testimonials-header .section-label { color: var(--brass); display: block; margin-bottom: 16px; }
-    .testimonials-header .section-title {
-      font-size: clamp(28px, 3vw, 44px);
-      color: var(--ivory);
-    }
-    .testimonials-track-wrap {
-      position: relative;
-      overflow: hidden;
-    }
-    .testimonials-track {
-      display: flex;
-      transition: transform 0.6s var(--ease-out);
-    }
-    .testimonial-slide {
-      min-width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-    .testimonial-card {
-      padding: 44px 36px;
-      background: rgba(246,241,231,0.04);
-      border: 1px solid rgba(178,136,77,0.1);
-      display: flex;
-      flex-direction: column;
-    }
-    .testimonial-stars {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 24px;
-    }
-    .testimonial-stars svg {
-      width: 14px; height: 14px;
-      fill: var(--brass);
-    }
-    .testimonial-quote {
-      font-family: var(--serif);
-      font-size: 19px;
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.6;
-      color: var(--ivory);
-      flex: 1;
-      margin-bottom: 32px;
-    }
-    .testimonial-divider {
-      width: 30px; height: 1px;
-      background: var(--brass);
-      opacity: 0.4;
-      margin-bottom: 20px;
-    }
-    .testimonial-author-name {
-      font-family: var(--sans);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--ivory);
-    }
-    .testimonial-author-tag {
-      font-size: 11.5px;
-      font-weight: 300;
-      color: var(--stone);
-      margin-top: 4px;
-    }
-    .testimonials-nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 48px;
-    }
-    .t-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: rgba(178,136,77,0.3);
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .t-dot.active {
-      background: var(--brass);
-      transform: scale(1.3);
-    }
 
     /* ─── TRUST SIGNALS ──────────────────────────────────── */
     #trust {
@@ -1329,8 +1230,8 @@
         <ul class="nav-links" role="list">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#fit">Is This For Me?</a></li>
           <li><a href="#journey">Patient Experience</a></li>
-          <li><a href="#testimonials">Results</a></li>
           <li><a href="#cta">Contact</a></li>
         </ul>
 
@@ -1348,8 +1249,8 @@
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#about" onclick="closeMobile()">About</a>
     <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#fit" onclick="closeMobile()">Is This For Me?</a>
     <a href="#journey" onclick="closeMobile()">Patient Experience</a>
-    <a href="#testimonials" onclick="closeMobile()">Results</a>
     <a href="#cta" onclick="closeMobile()">Contact</a>
     <button class="mobile-menu-cta" onclick="scrollToBooking(); closeMobile()">Book Appointment</button>
   </div>
@@ -1620,6 +1521,57 @@
   </section>
 
 
+  <!-- ─── IS THIS FOR ME ───────────────────────────────────── -->
+  <section id="fit" aria-labelledby="fit-heading">
+    <div class="container">
+      <div class="fit-inner">
+        <div class="fit-left fade-up">
+          <span class="section-label">Is This for Me?</span>
+          <h2 id="fit-heading" class="fit-headline">You may be closer to a solution than you think.</h2>
+          <p class="fit-intro">Many patients wait years before asking for help because they are embarrassed, overwhelmed, or have been told their situation is too complicated. If any of this sounds familiar, a consultation may help you understand what is truly possible.</p>
+        </div>
+
+        <div class="fit-right fade-up delay-2">
+          <ul class="fit-list" role="list">
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You have missing, failing, or loose teeth.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You struggle with loose or uncomfortable dentures.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You struggle to eat the foods you want.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You have been told you are not a candidate for implants.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You have been told you do not have enough bone for implants.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You want a second opinion before committing to major treatment.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You feel overwhelmed by conflicting treatment recommendations.
+            </li>
+            <li>
+              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You want a clear plan, not a rushed sales consultation.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ─── JOURNEY ───────────────────────────────────────── -->
   <section id="journey" aria-labelledby="journey-heading">
     <div class="container">
@@ -1684,25 +1636,6 @@
   </section>
 
 
-  <!-- ─── TESTIMONIALS ──────────────────────────────────── -->
-  <section id="testimonials" aria-labelledby="testimonials-heading">
-    <div class="testimonials-bg" aria-hidden="true"></div>
-    <div class="container">
-      <div class="testimonials-header fade-up">
-        <span class="section-label">Patient Stories</span>
-        <h2 id="testimonials-heading" class="section-title">Real patients. Real results.</h2>
-      </div>
-
-      <div class="testimonials-coming fade-up" style="text-align:center; padding: 64px 0 32px;">
-        <p style="font-family:var(--serif); font-size:22px; font-style:italic; color:rgba(246,241,231,0.5); max-width:520px; margin:0 auto; line-height:1.65;">
-          Patient stories are on their way.<br>We are just getting started — and we intend to earn them.
-        </p>
-        <div style="width:40px; height:1px; background:var(--brass); opacity:0.4; margin:32px auto 0;"></div>
-      </div>
-    </div>
-  </section>
-
-
   <!-- ─── TRUST SIGNALS ─────────────────────────────────── -->
   <section id="trust" aria-label="Why choose Foundation Dental Center">
     <div class="container">
@@ -1740,57 +1673,6 @@
           </svg>
           <h3 class="trust-title">Clear Treatment Plans</h3>
           <p class="trust-text">Every recommendation comes with a written plan, honest cost discussion, and clear answers about what to expect.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ─── IS THIS FOR ME ───────────────────────────────────── -->
-  <section id="fit" aria-labelledby="fit-heading">
-    <div class="container">
-      <div class="fit-inner">
-        <div class="fit-left fade-up">
-          <span class="section-label">Is This for Me?</span>
-          <h2 id="fit-heading" class="fit-headline">You may be closer to a solution than you think.</h2>
-          <p class="fit-intro">Many patients wait years before asking for help because they are embarrassed, overwhelmed, or have been told their situation is too complicated. If any of this sounds familiar, a consultation may help you understand what is truly possible.</p>
-        </div>
-
-        <div class="fit-right fade-up delay-2">
-          <ul class="fit-list" role="list">
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You have missing, failing, or loose teeth.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You struggle with loose or uncomfortable dentures.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You struggle to eat the foods you want.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You have been told you are not a candidate for implants.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You have been told you do not have enough bone for implants.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You want a second opinion before committing to major treatment.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You feel overwhelmed by conflicting treatment recommendations.
-            </li>
-            <li>
-              <svg class="fit-check" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              You want a clear plan, not a rushed sales consultation.
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -1940,8 +1822,8 @@
           <div class="footer-col-title">Practice</div>
           <ul>
             <li><a href="#about">About Us</a></li>
+            <li><a href="#fit">Is This For Me?</a></li>
             <li><a href="#journey">Patient Experience</a></li>
-            <li><a href="#testimonials">Results</a></li>
             <li><a href="#cta">Contact</a></li>
           </ul>
         </div>
