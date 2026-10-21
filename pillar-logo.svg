@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 300"
+     role="img">
+
+  <title>Foundation Dental Center — Pillar Logo Mark</title>
+  <desc>
+    Brand mark variant 02: four vertical column shafts in Aged Brass (#B2884D),
+    bounded by top entablature and bottom stylobate crossbars, above stacked
+    Dusted Navy typography. Light and dark versions shown side by side.
+  </desc>
+
+  <!-- Dark ground for right panel -->
+  <rect x="600" y="0" width="600" height="300" fill="#2F3E4D"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       LIGHT VERSION — left panel  (local x-origin: 0)
+       Icon center x = 300
+  ═══════════════════════════════════════════════════ -->
+  <g id="logo-light">
+
+    <!-- ── PILLAR ICON MARK ──────────────────────────────
+         Top entablature:  y = 67,  x 228 → 372  (144 px wide)
+         Bottom stylobate: y = 143, x 228 → 372  (144 px wide)
+         4 column shafts:  y 67 → 143             (76 px tall)
+                           x = 240 | 280 | 320 | 360
+                           Δx = 40 px, inset 12 px from bar ends
+         Bar stroke-width 2.8 px  (entablature weight > column weight)
+         Column stroke-width 1.8 px
+    ─────────────────────────────────────────────────── -->
+    <g id="pillar-mark-light" stroke="#B2884D" fill="none">
+      <!-- Top entablature crossbar -->
+      <line stroke-width="2.8" x1="228" y1="67"  x2="372" y2="67"/>
+      <!-- Bottom stylobate crossbar -->
+      <line stroke-width="2.8" x1="228" y1="143" x2="372" y2="143"/>
+      <!-- Column shafts — uniform Δ = 40 px -->
+      <line stroke-width="1.8" x1="240" y1="67"  x2="240" y2="143"/>
+      <line stroke-width="1.8" x1="280" y1="67"  x2="280" y2="143"/>
+      <line stroke-width="1.8" x1="320" y1="67"  x2="320" y2="143"/>
+      <line stroke-width="1.8" x1="360" y1="67"  x2="360" y2="143"/>
+    </g>
+
+    <!-- ── TYPOGRAPHY — Dusted Navy #2F3E4D ─────────────
+         All y-positions, font-sizes, and letter-spacing values
+         match the 01 ARCH logo exactly for design-system consistency.
+    ─────────────────────────────────────────────────── -->
+    <g id="typography-light" text-anchor="middle" fill="#2F3E4D">
+
+      <!-- Line 1: FOUNDATION  (Cormorant Garamond, 37 pt, wt 400, ls 9) -->
+      <text x="300" y="191"
+            font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
+            font-size="37" font-weight="400" letter-spacing="9">FOUNDATION</text>
+
+      <!-- Line 2: DENTAL CENTER  (Jost, 11.5 pt, wt 300, ls 5) -->
+      <text x="300" y="214"
+            font-family="'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+            font-size="11.5" font-weight="300" letter-spacing="5">DENTAL CENTER</text>
+
+      <!-- Divider rule — 144 px wide, centered at x=300 -->
+      <line x1="228" y1="228" x2="372" y2="228"
+            stroke="#2F3E4D" stroke-width="0.55" opacity="0.35"/>
+
+      <!-- Line 3: Tagline  (Jost, 8.5 pt, wt 300, ls 2.2) -->
+      <text x="300" y="243"
+            font-family="'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+            font-size="8.5" font-weight="300" letter-spacing="2.2"
+            opacity="0.6">ADVANCED IMPLANT &amp; RESTORATIVE DENTISTRY</text>
+
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════
+       DARK VERSION — right panel  (translate +600)
+       Icon center x = 300 (local) = 900 (global)
+  ═══════════════════════════════════════════════════ -->
+  <g id="logo-dark" transform="translate(600,0)">
+
+    <!-- ── PILLAR ICON MARK ── -->
+    <g id="pillar-mark-dark" stroke="#B2884D" fill="none">
+      <line stroke-width="2.8" x1="228" y1="67"  x2="372" y2="67"/>
+      <line stroke-width="2.8" x1="228" y1="143" x2="372" y2="143"/>
+      <line stroke-width="1.8" x1="240" y1="67"  x2="240" y2="143"/>
+      <line stroke-width="1.8" x1="280" y1="67"  x2="280" y2="143"/>
+      <line stroke-width="1.8" x1="320" y1="67"  x2="320" y2="143"/>
+      <line stroke-width="1.8" x1="360" y1="67"  x2="360" y2="143"/>
+    </g>
+
+    <!-- ── TYPOGRAPHY — Warm Ivory #F6F1E7 ── -->
+    <g id="typography-dark" text-anchor="middle" fill="#F6F1E7">
+
+      <text x="300" y="191"
+            font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
+            font-size="37" font-weight="400" letter-spacing="9">FOUNDATION</text>
+
+      <text x="300" y="214"
+            font-family="'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+            font-size="11.5" font-weight="300" letter-spacing="5">DENTAL CENTER</text>
+
+      <line x1="228" y1="228" x2="372" y2="228"
+            stroke="#F6F1E7" stroke-width="0.55" opacity="0.3"/>
+
+      <text x="300" y="243"
+            font-family="'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+            font-size="8.5" font-weight="300" letter-spacing="2.2"
+            opacity="0.55">ADVANCED IMPLANT &amp; RESTORATIVE DENTISTRY</text>
+
+    </g>
+  </g>
+
+</svg>

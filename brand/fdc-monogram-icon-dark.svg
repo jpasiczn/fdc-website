@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="190 35 220 220" role="img">
+  <title>Foundation Dental Center — Monogram F Icon (Dark)</title>
+  <desc>Standalone F lettermark icon, Dusted Navy ground. Same viewBox as fdc-monogram-icon.svg for drop-in swap. Primary favicon source for browser tabs.</desc>
+  <defs>
+    <style>.brass { stroke:#B2884D; fill:none; }</style>
+  </defs>
+
+  <rect x="190" y="35" width="220" height="220" fill="#2F3E4D"/>
+
+  <g id="logo-mark" class="brass" stroke-linecap="round">
+    <line stroke-width="9" x1="230" y1="70"  x2="230" y2="220"/>
+    <line stroke-width="9" x1="230" y1="70"  x2="370" y2="70"/>
+    <line stroke-width="9" x1="230" y1="145" x2="322" y2="145"/>
+  </g>
+</svg>

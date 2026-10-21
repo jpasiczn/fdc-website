@@ -1,0 +1,15 @@
+# Cloudflare Pages redirects
+
+# Legacy URL patterns from old site or marketer site
+/services                 /full-arch-fixed            301
+/dental-implants          /single-implants            301
+/implants                 /single-implants            301
+/all-on-four              /full-arch-fixed            301
+/all-on-x                 /full-arch-fixed            301
+/full-arch                /full-arch-fixed            301
+/sedation                 /anesthesia                 301
+/iv-sedation              /anesthesia                 301
+/doctor                   /meet-the-doctor            301
+/dr-pasicznyk             /meet-the-doctor            301
+/blog                     /                           301
+/news                     /                           301

@@ -1,0 +1,49 @@
+{
+  "name": "Foundation Dental Center",
+  "tagline": "Advanced Implant & Restorative Dentistry",
+  "doctor": "Dr. John Pasicznyk, DDS",
+  "doctorName": "Dr. John Pasicznyk",
+  "doctorCredentials": "DDS",
+  "doctorSchool": "Indiana University School of Dentistry",
+
+  "address": {
+    "street": "26811 South Bay Drive, Suite 200",
+    "city": "Bonita Springs",
+    "state": "FL",
+    "zip": "34134",
+    "full": "26811 South Bay Drive, Suite 200, Bonita Springs, FL 34134",
+    "schemaStreet": "26811 South Bay Drive",
+    "schemaUnit": "Suite 200"
+  },
+
+  "phone": "(239) 946-1881",
+  "phoneRaw": "+12399461881",
+  "trackingPhone": "(239) 268-6943",
+  "email": "welcome@fdcbonita.com",
+
+  "hours": {
+    "display": "Monday–Thursday, 9:00 am – 4:00 pm. Friday–Sunday closed.",
+    "short": "Mon–Thu  9 am – 4 pm",
+    "schema": "Mo,Tu,We,Th 09:00-16:00"
+  },
+
+  "directionsUrl": "https://maps.app.goo.gl/tpw6EAxmdTPknwGV6",
+
+  "canonicalDomain": "https://fdcbonita.com",
+
+  "geo": {
+    "lat": "26.3253",
+    "lng": "-81.7929"
+  },
+
+  "bookingMode": "call",
+  "webSchedUrl": "",
+  "consultFormEmbed": "",
+
+  "freeConsultOffer": false,
+  "showTestimonials": false,
+  "showBeforeAfter": false,
+  "analyticsEnabled": false,
+
+  "freeConsultDisclaimer": "THE PATIENT AND ANY OTHER PERSON RESPONSIBLE FOR PAYMENT HAS A RIGHT TO REFUSE TO PAY, CANCEL PAYMENT, OR BE REIMBURSED FOR PAYMENT FOR ANY OTHER SERVICE, EXAMINATION, OR TREATMENT THAT IS PERFORMED AS A RESULT OF AND WITHIN 72 HOURS OF RESPONDING TO THE ADVERTISEMENT FOR THE FREE, DISCOUNTED FEE, OR REDUCED FEE SERVICE, EXAMINATION, OR TREATMENT."
+}

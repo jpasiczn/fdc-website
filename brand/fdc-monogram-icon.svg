@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="190 35 220 220" role="img">
+  <title>Foundation Dental Center — Monogram F Icon</title>
+  <desc>Standalone F lettermark icon, transparent background. Square crop 190 35 220 220 centres mark with ~35.5 px equal padding on all sides. Favicons, app icons, social avatars.</desc>
+  <defs>
+    <style>.brass { stroke:#B2884D; fill:none; }</style>
+  </defs>
+
+  <g id="logo-mark" class="brass" stroke-linecap="round">
+    <line stroke-width="9" x1="230" y1="70"  x2="230" y2="220"/>
+    <line stroke-width="9" x1="230" y1="70"  x2="370" y2="70"/>
+    <line stroke-width="9" x1="230" y1="145" x2="322" y2="145"/>
+  </g>
+</svg>

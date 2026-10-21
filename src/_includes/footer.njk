@@ -1,0 +1,71 @@
+<footer id="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="/" aria-label="{{ site.name }} — Home">
+        <img src="/assets/logo/fdc-logo-primary-dark-transparent.svg"
+             alt="{{ site.name }}"
+             class="footer-logo"
+             width="220" height="90" />
+      </a>
+      <p class="footer-tagline">{{ site.tagline }}</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="footer-nav-col">
+        <p class="footer-nav-heading">Treatments</p>
+        <ul role="list">
+          <li><a href="/full-arch-fixed">Full-Arch Implants</a></li>
+          <li><a href="/single-implants">Single &amp; Multiple Implants</a></li>
+          <li><a href="/implant-dentures">Implant Dentures</a></li>
+          <li><a href="/bone-grafting">Bone Grafting</a></li>
+          <li><a href="/zygomatic-implants">Zygomatic Implants</a></li>
+          <li><a href="/restorative-dentistry">Restorative Dentistry</a></li>
+          <li><a href="/anesthesia">Comfort &amp; Anesthesia</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <p class="footer-nav-heading">Practice</p>
+        <ul role="list">
+          <li><a href="/meet-the-doctor">Meet Dr. Pasicznyk</a></li>
+          <li><a href="/about">About the Practice</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <p class="footer-nav-heading mt-sm">Legal</p>
+        <ul role="list">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/hipaa-notice">HIPAA Notice</a></li>
+          <li><a href="/accessibility">Accessibility</a></li>
+          <li><a href="/terms">Terms of Use</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="footer-contact">
+      <p class="footer-nav-heading">Contact Us</p>
+      <address>
+        <p>
+          <a href="{{ site.directionsUrl }}" target="_blank" rel="noopener noreferrer">
+            {{ site.address.street }}<br />
+            {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}
+          </a>
+        </p>
+        <p><a href="tel:{{ site.phoneRaw }}">{{ site.phone }}</a></p>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </address>
+      <p class="footer-hours">{{ site.hours.display }}</p>
+      <a href="/contact" class="btn-primary footer-cta">Schedule a Consultation</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; <span id="footer-year"></span> {{ site.name }}. All rights reserved.</p>
+      <p class="footer-disclaimer">Results vary by patient. Information on this site is for educational purposes only and does not constitute dental advice or a patient–doctor relationship.</p>
+    </div>
+  </div>
+
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</footer>

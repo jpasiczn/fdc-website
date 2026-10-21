@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pageTitle: "Accessibility Statement | Foundation Dental Center"
+pageDesc: "Accessibility statement for fdcbonita.com — Foundation Dental Center in Bonita Springs, FL."
+---
+
+<section class="hero" style="padding-block:var(--space-xl);" aria-labelledby="page-heading">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Legal</span>
+      <h1 id="page-heading">Accessibility Statement</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container" style="max-width:760px;">
+    <div class="fade-up">
+      <h2>Our Commitment</h2>
+      <p>Foundation Dental Center is committed to ensuring that fdcbonita.com is accessible to people with disabilities. We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA.</p>
+
+      <h2 style="margin-top:var(--space-lg);">Technical Measures</h2>
+      <p>We have taken the following steps to improve accessibility on this site:</p>
+      <ul style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.5rem;padding-left:1.25rem;list-style:disc;">
+        <li>Semantic HTML structure with ARIA landmarks</li>
+        <li>Sufficient color contrast for all text elements</li>
+        <li>Keyboard navigation support throughout</li>
+        <li>Visible focus indicators on all interactive elements</li>
+        <li>Meaningful alt text on all images</li>
+        <li>Skip navigation link for keyboard users</li>
+      </ul>
+
+      <h2 style="margin-top:var(--space-lg);">Known Limitations</h2>
+      <p>We are actively working to improve accessibility across all pages. Third-party embedded content (such as maps or scheduling tools) may not fully conform to WCAG 2.1 AA.</p>
+
+      <h2 style="margin-top:var(--space-lg);">Feedback and Contact</h2>
+      <p>If you encounter a barrier on this site or need information in an alternative format, please contact us:</p>
+      <address style="margin-top:0.5rem;">
+        {{ site.name }}<br />
+        <a href="tel:{{ site.phoneRaw }}">{{ site.phone }}</a><br />
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </address>
+      <p style="margin-top:var(--space-sm);">We will respond within two business days and work to provide the information you need.</p>
+    </div>
+  </div>
+</section>

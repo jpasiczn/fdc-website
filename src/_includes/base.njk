@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ pageTitle if pageTitle else site.name }}</title>
+  <meta name="description" content="{{ pageDesc if pageDesc else site.tagline + ' in Bonita Springs, FL.' }}" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ site.canonicalDomain }}{{ page.url }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta property="og:title" content="{{ pageTitle if pageTitle else site.name }}" />
+  <meta property="og:description" content="{{ pageDesc if pageDesc else site.tagline + ' in Bonita Springs, FL.' }}" />
+  <meta property="og:url" content="{{ site.canonicalDomain }}{{ page.url }}" />
+  <meta property="og:image" content="{{ site.canonicalDomain }}/assets/logo/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/fdc-logo-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/logo/fdc-arch-avatar-180.png" />
+
+  <!-- Fonts: Cormorant Garamond (headings) + Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- JSON-LD: LocalBusiness (every page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "{{ site.name }}",
+    "url": "{{ site.canonicalDomain }}",
+    "telephone": "{{ site.phoneRaw }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address.schemaStreet }}",
+      "addressLocality": "{{ site.address.city }}",
+      "addressRegion": "{{ site.address.state }}",
+      "postalCode": "{{ site.address.zip }}",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "{{ site.geo.lat }}",
+      "longitude": "{{ site.geo.lng }}"
+    },
+    "openingHours": "{{ site.hours.schema }}",
+    "hasMap": "{{ site.directionsUrl }}"
+  }
+  </script>
+
+  {% if pageSchemaExtra %}
+  <script type="application/ld+json">{{ pageSchemaExtra | safe }}</script>
+  {% endif %}
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  {% include "header.njk" %}
+
+  <main id="main-content" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script src="/assets/js/nav.js"></script>
+</body>
+</html>

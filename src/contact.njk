@@ -1,0 +1,87 @@
+---
+layout: base.njk
+pageTitle: "Contact Foundation Dental Center | Bonita Springs, FL"
+pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs, FL. Call (239) 946-1881 or email welcome@fdcbonita.com. Mon–Thu 9 am–4 pm."
+---
+
+<section class="hero" style="padding-block:var(--space-2xl);" aria-labelledby="page-heading">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Contact Us</span>
+      <h1 id="page-heading">Let's Start a Conversation</h1>
+      <p class="hero-subhead">The first step is simply reaching out. Call or email — we'll get you scheduled and answer any questions you have before your appointment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-white" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="content-split" style="align-items:start;">
+
+      <div class="fade-up">
+        <span class="eyebrow">Reach Us</span>
+        <h2 id="contact-heading" class="section-heading" style="font-size:clamp(1.5rem,3vw,2rem);">Get in Touch</h2>
+        <span class="gold-rule"></span>
+
+        <div style="display:flex;flex-direction:column;gap:var(--space-lg);margin-top:var(--space-md);">
+
+          <div>
+            <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Phone</p>
+            <a href="tel:{{ site.phoneRaw }}" style="font-size:1.375rem;font-family:var(--font-serif);font-weight:500;text-decoration:none;color:var(--navy);">{{ site.phone }}</a>
+            <p style="font-size:0.875rem;color:var(--mid-gray);margin-top:0.25rem;">The quickest way to schedule. We pick up — or call you right back.</p>
+          </div>
+
+          <div>
+            <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Email</p>
+            <a href="mailto:{{ site.email }}" style="font-size:1.125rem;font-weight:500;text-decoration:none;color:var(--navy);">{{ site.email }}</a>
+            <p style="font-size:0.875rem;color:var(--mid-gray);margin-top:0.25rem;">Send us a message anytime. We respond within one business day.</p>
+          </div>
+
+          <div>
+            <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Hours</p>
+            <p style="font-weight:500;">{{ site.hours.display }}</p>
+          </div>
+
+        </div>
+
+        <div style="margin-top:var(--space-xl);">
+          <a href="tel:{{ site.phoneRaw }}" class="btn-primary btn-lg" style="margin-right:var(--space-sm);">Call Now</a>
+          <a href="mailto:{{ site.email }}" class="btn-outline btn-lg">Send Email</a>
+        </div>
+
+        {% if site.bookingMode == 'websched' and site.webSchedUrl %}
+        <div style="margin-top:var(--space-xl);">
+          <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);">Schedule Online</p>
+          <!-- [[TODO: embed Open Dental scheduler at site.webSchedUrl when mode switches to websched]] -->
+        </div>
+        {% endif %}
+
+        {% if site.bookingMode == 'form' and site.consultFormEmbed %}
+        <div style="margin-top:var(--space-xl);">
+          <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);">Consultation Request</p>
+          <!-- [[TODO: embed HIPAA Jotform at site.consultFormEmbed when mode switches to form]] -->
+        </div>
+        {% endif %}
+
+      </div>
+
+      <div class="fade-up">
+        <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Location</p>
+        <address style="font-size:1rem;line-height:1.8;margin-bottom:var(--space-md);">
+          <strong>{{ site.name }}</strong><br />
+          {{ site.address.street }}<br />
+          {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}
+        </address>
+        <a href="{{ site.directionsUrl }}" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-bottom:var(--space-lg);">Get Directions</a>
+        <div class="location-map-placeholder" style="margin-top:var(--space-md);">
+          <!-- [[TODO: embed Google Map or static map image]] -->
+          Map placeholder
+        </div>
+        <div style="margin-top:var(--space-lg);padding:var(--space-md);background:var(--ivory);border-radius:var(--radius-lg);">
+          <p style="font-size:0.875rem;color:var(--mid-gray);margin:0;">Serving Bonita Springs, Naples, Fort Myers, Estero, and Southwest Florida.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 600 360" role="img">
+
+  <title>Foundation Dental Center — One-Color Black Logo</title>
+  <desc>
+    Single-color black version. All elements rendered in pure #000000,
+    transparent background. Use for: one-color print (silkscreen, foil stamp,
+    engraving), embroidery digitising, newspaper, fax/photocopy-safe contexts.
+    Arch geometry identical to fdc-logo-primary-light.svg.
+  </desc>
+
+  <defs>
+    <style>
+      .mono    { stroke:#000000; fill:none; }
+      .mono-f  { fill:#000000; }
+      .serif-h { font-family:'Cormorant Garamond','Times New Roman',Georgia,serif; }
+      .sans-h  { font-family:'Jost','Sohne','Helvetica Neue',Helvetica,Arial,sans-serif; }
+    </style>
+  </defs>
+
+  <!-- ================================================================
+       ARCH MARK — master geometry, locked
+  ================================================================ -->
+  <g id="logo-mark">
+    <path class="mono" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 276 220 L 276 164 A 24 24 0 0 1 324 164 L 324 220"/>
+    <path class="mono" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 257 220 L 257 164 A 43 43 0 0 1 343 164 L 343 220"/>
+    <path class="mono" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 238 220 L 238 164 A 62 62 0 0 1 362 164 L 362 220"/>
+    <path class="mono" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 219 220 L 219 164 A 81 81 0 0 1 381 164 L 381 220"/>
+    <path class="mono" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 200 220 L 200 164 A 100 100 0 0 1 400 164 L 400 220"/>
+  </g>
+
+  <!-- ================================================================
+       TYPOGRAPHY — full lock-up, all black, no opacity reduction
+  ================================================================ -->
+  <g id="typography">
+    <text class="mono-f serif-h" x="300" y="298"
+          text-anchor="middle" font-size="58" font-weight="500" letter-spacing="9">FOUNDATION</text>
+    <text class="mono-f sans-h" x="300" y="330"
+          text-anchor="middle" font-size="22" font-weight="500" letter-spacing="6">DENTAL CENTER</text>
+    <line x1="270" y1="358" x2="330" y2="358" stroke="#000000" stroke-width="1.5"/>
+    <text class="mono-f sans-h" x="300" y="378"
+          text-anchor="middle" font-size="11.5" font-weight="400" letter-spacing="2.2">ADVANCED IMPLANT &amp; RESTORATIVE DENTISTRY</text>
+  </g>
+
+</svg>

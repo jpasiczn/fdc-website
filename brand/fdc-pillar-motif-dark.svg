@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="194 47 212 212" role="img">
+  <title>Foundation Dental Center — Pillar Motif (Dark)</title>
+  <desc>Supporting architectural motif, Dusted Navy ground. Use on light collateral to introduce the dark field. Not a standalone brand mark.</desc>
+  <defs>
+    <style>.brass { stroke:#B2884D; fill:none; }</style>
+  </defs>
+  <rect x="194" y="47" width="212" height="212" fill="#2F3E4D"/>
+  <g id="pillar-motif" class="brass">
+    <line stroke-width="5" x1="228" y1="85"  x2="372" y2="85"/>
+    <line stroke-width="5" x1="228" y1="220" x2="372" y2="220"/>
+    <line stroke-width="3" x1="240" y1="85"  x2="240" y2="220"/>
+    <line stroke-width="3" x1="280" y1="85"  x2="280" y2="220"/>
+    <line stroke-width="3" x1="320" y1="85"  x2="320" y2="220"/>
+    <line stroke-width="3" x1="360" y1="85"  x2="360" y2="220"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 600 360" role="img">
+
+  <title>Foundation Dental Center — Primary Logo (Dark / Reversed)</title>
+  <desc>
+    Primary brand mark, dark/reversed version. Dusted Navy ground (#2F3E4D).
+    Use on dark backgrounds: web hero sections, dark print stock, signage.
+    Same viewBox as primary-light (0 40 600 360) for drop-in interchangeability.
+    Arch paths are byte-for-byte identical to fdc-logo-primary-light.svg.
+  </desc>
+
+  <defs>
+    <style>
+      .brass   { stroke:#B2884D; fill:none; }
+      .ivory   { fill:#F6F1E7; }
+      .serif-h { font-family:'Cormorant Garamond','Times New Roman',Georgia,serif; }
+      .sans-h  { font-family:'Jost','Sohne','Helvetica Neue',Helvetica,Arial,sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Dusted Navy ground — fills the full viewBox -->
+  <rect x="0" y="0" width="600" height="600" fill="#2F3E4D"/>
+
+  <!-- ================================================================
+       ARCH MARK — master geometry, locked (identical to primary-light)
+  ================================================================ -->
+  <g id="logo-mark">
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 276 220 L 276 164 A 24 24 0 0 1 324 164 L 324 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 257 220 L 257 164 A 43 43 0 0 1 343 164 L 343 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 238 220 L 238 164 A 62 62 0 0 1 362 164 L 362 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 219 220 L 219 164 A 81 81 0 0 1 381 164 L 381 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 200 220 L 200 164 A 100 100 0 0 1 400 164 L 400 220"/>
+  </g>
+
+  <!-- ================================================================
+       TYPOGRAPHY — Warm Ivory on dark ground, full service line
+  ================================================================ -->
+  <g id="typography">
+    <text class="ivory serif-h" x="300" y="298"
+          text-anchor="middle" font-size="58" font-weight="500" letter-spacing="9">FOUNDATION</text>
+    <text class="ivory sans-h" x="300" y="330"
+          text-anchor="middle" font-size="22" font-weight="500" letter-spacing="6">DENTAL CENTER</text>
+    <line x1="270" y1="358" x2="330" y2="358" stroke="#F6F1E7" stroke-width="1.5" opacity="0.5"/>
+    <text class="ivory sans-h" x="300" y="378"
+          text-anchor="middle" font-size="11.5" font-weight="400" letter-spacing="2.2"
+          opacity="0.75">ADVANCED IMPLANT &amp; RESTORATIVE DENTISTRY</text>
+  </g>
+
+</svg>

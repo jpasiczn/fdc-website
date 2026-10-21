@@ -1,0 +1,114 @@
+---
+layout: base.njk
+pageTitle: "Meet Dr. John Pasicznyk, DDS | Foundation Dental Center — Bonita Springs, FL"
+pageDesc: "Dr. John Pasicznyk, DDS is the founder of Foundation Dental Center in Bonita Springs, FL, specializing in implant and restorative dentistry."
+pageSchemaExtra: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. John Pasicznyk",
+    "honorificPrefix": "Dr.",
+    "honorificSuffix": "DDS",
+    "jobTitle": "Dentist",
+    "affiliation": {
+      "@type": "Dentist",
+      "name": "Foundation Dental Center",
+      "url": "https://fdcbonita.com"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indiana University School of Dentistry"
+    },
+    "url": "https://fdcbonita.com/meet-the-doctor"
+  }
+---
+
+<section class="hero" style="padding-block:var(--space-2xl);" aria-labelledby="page-heading">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Meet the Doctor</span>
+      <h1 id="page-heading">{{ site.doctor }}</h1>
+      <p class="hero-subhead">Founder of Foundation Dental Center. Implant and restorative dentist. Bonita Springs, FL.</p>
+      <div class="hero-actions">
+        <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-white" aria-labelledby="bio-heading">
+  <div class="container content-split">
+    <div class="fade-up">
+      <span class="eyebrow">Background</span>
+      <h2 id="bio-heading">Education &amp; Training</h2>
+      <span class="gold-rule"></span>
+      <p>{{ site.doctorName }} earned his Doctor of Dental Surgery degree from {{ site.doctorSchool }}. Following graduation, he concentrated his focus on implant dentistry and complex restorative cases — the intersection of surgical precision and aesthetic outcome.</p>
+      <p>He founded Foundation Dental Center with a specific mission: to provide patients who have lost teeth — or who face losing them — with a thorough, honest, unhurried process that puts their goals first.</p>
+    </div>
+    <div class="fade-up">
+      <div class="photo-placeholder" style="min-height:440px;">
+        <!-- [[TODO: professional headshot — Dr. Pasicznyk]] -->
+        <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="color:var(--light-gray)"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        <span>[[TODO: doctor headshot]]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-light" aria-labelledby="philosophy-heading">
+  <div class="container">
+    <div class="content-split">
+      <div class="fade-up">
+        <span class="eyebrow">Philosophy</span>
+        <h2 id="philosophy-heading">Built to Last</h2>
+        <span class="gold-rule"></span>
+        <p>Dr. Pasicznyk's philosophy is reflected in the practice's name. A Foundation is not cosmetic — it is structural. Every treatment plan is built around the biology of the patient, the mechanics of the bite, and the long-term durability of the result.</p>
+        <p>"I founded this practice because I believe patients who have lost teeth deserve someone who will take the time to understand their situation — not fit them into a protocol."</p>
+        <p style="color:var(--mid-gray);font-size:0.875rem;margin-top:0.25rem;">— {{ site.doctor }}</p>
+      </div>
+      <div class="fade-up">
+        <span class="eyebrow">Practice Focus</span>
+        <h2 style="font-size:clamp(1.25rem,2.5vw,1.75rem);">What We Focus On</h2>
+        <span class="gold-rule"></span>
+        <ul style="display:flex;flex-direction:column;gap:0.875rem;margin-top:var(--space-sm);">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Full-arch implant reconstruction</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Single and multiple implants</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Bone grafting &amp; ridge reconstruction</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Zygomatic implants for complex cases</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>IV sedation for patient comfort</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Full-mouth restorative dentistry</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-mtd">
+  <div class="container fade-up">
+    <span class="eyebrow" style="color:var(--gold)">Ready to Meet in Person?</span>
+    <h2 id="cta-mtd">Schedule a Consultation with Dr. Pasicznyk</h2>
+    <p>The consultation is where we start — no pressure, just a real conversation about your situation.</p>
+    <div class="cta-actions">
+      <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+      <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<header id="site-header" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="/" class="nav-logo" aria-label="{{ site.name }} — Home">
+        <img src="/assets/logo/fdc-logo-small-light.svg"
+             alt="{{ site.name }}"
+             class="nav-logo-img"
+             width="160" height="48" />
+      </a>
+
+      <nav id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="/full-arch-fixed">Full-Arch Implants</a></li>
+          <li class="nav-has-dropdown">
+            <a href="/single-implants" aria-expanded="false" aria-haspopup="true">Implants &amp; Restorations</a>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="/single-implants">Single &amp; Multiple Implants</a></li>
+              <li><a href="/implant-dentures">Implant Dentures</a></li>
+              <li><a href="/bone-grafting">Bone Grafting</a></li>
+              <li><a href="/zygomatic-implants">Zygomatic Implants</a></li>
+              <li><a href="/restorative-dentistry">Restorative Dentistry</a></li>
+              <li><a href="/anesthesia">Comfort &amp; Anesthesia</a></li>
+            </ul>
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/meet-the-doctor">Meet Dr. Pasicznyk</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <a href="/contact" class="btn-outline nav-cta">Schedule a Consultation</a>
+
+      <button class="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="/full-arch-fixed">Full-Arch Implants</a></li>
+      <li><a href="/single-implants">Single &amp; Multiple Implants</a></li>
+      <li><a href="/implant-dentures">Implant Dentures</a></li>
+      <li><a href="/bone-grafting">Bone Grafting</a></li>
+      <li><a href="/zygomatic-implants">Zygomatic Implants</a></li>
+      <li><a href="/restorative-dentistry">Restorative Dentistry</a></li>
+      <li><a href="/anesthesia">Comfort &amp; Anesthesia</a></li>
+      <li><a href="/meet-the-doctor">Meet Dr. Pasicznyk</a></li>
+      <li><a href="/about">About the Practice</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact" class="btn-primary mobile-cta">Schedule a Consultation</a></li>
+    </ul>
+    <p class="mobile-contact">
+      <a href="tel:{{ site.phoneRaw }}">{{ site.phone }}</a>
+    </p>
+  </div>
+</header>

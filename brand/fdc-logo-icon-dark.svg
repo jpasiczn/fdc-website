@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="170 12 260 260" role="img">
+
+  <title>Foundation Dental Center — Arch Icon Mark (Dark)</title>
+  <desc>
+    Standalone icon mark, Dusted Navy ground.
+    Same square viewBox as fdc-logo-icon.svg for pixel-perfect swapping.
+    Use on light backgrounds that require a contained dark icon tile —
+    social profile images, app icons, favicon dark-mode variant.
+  </desc>
+
+  <defs>
+    <style>
+      .brass { stroke:#B2884D; fill:none; }
+    </style>
+  </defs>
+
+  <!-- Dusted Navy ground — fills the full viewBox coordinate area -->
+  <rect x="170" y="12" width="260" height="260" fill="#2F3E4D"/>
+
+  <!-- ================================================================
+       ARCH MARK — master geometry, locked (identical to fdc-logo-icon.svg)
+  ================================================================ -->
+  <g id="logo-mark">
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 276 220 L 276 164 A 24 24 0 0 1 324 164 L 324 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 257 220 L 257 164 A 43 43 0 0 1 343 164 L 343 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 238 220 L 238 164 A 62 62 0 0 1 362 164 L 362 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 219 220 L 219 164 A 81 81 0 0 1 381 164 L 381 220"/>
+    <path class="brass" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"
+          d="M 200 220 L 200 164 A 100 100 0 0 1 400 164 L 400 220"/>
+  </g>
+
+</svg>
