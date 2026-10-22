@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 pageTitle: "Contact Foundation Dental Center | Bonita Springs, FL"
-pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs, FL. Call (239) 946-1881 or email welcome@fdcbonita.com. Mon–Thu 9 am–4 pm."
+pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs, FL. Call (239) 946-1881 or book online. Mon–Thu 9 am–4 pm."
 ---
 
 <section class="hero" style="padding-block:var(--space-2xl);" aria-labelledby="page-heading">
@@ -9,7 +9,7 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
     <div class="hero-content">
       <span class="eyebrow">Contact Us</span>
       <h1 id="page-heading">Let's Start a Conversation</h1>
-      <p class="hero-subhead">Schedule online below, call us, or send an email — whichever is easiest. We'll confirm your appointment and answer any questions before you come in.</p>
+      <p class="hero-subhead">Book online below, call us, or send an email — whichever is easiest. We'll confirm your appointment and answer any questions before you come in.</p>
     </div>
   </div>
 </section>
@@ -50,7 +50,7 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
         </div>
 
         {% if site.bookingMode == 'websched' and site.webSchedUrl %}
-        <div style="margin-top:var(--space-xl);">
+        <div id="schedule" style="margin-top:var(--space-xl);">
           <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);">Schedule Online</p>
           <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:var(--space-md);">Prefer to book online? Choose a time below — or call us at <a href="tel:{{ site.phoneRaw }}" style="color:var(--navy);font-weight:600;">{{ site.phone }}</a> if you'd rather talk first.</p>
           <iframe
@@ -66,7 +66,7 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
         {% endif %}
 
         {% if site.bookingMode == 'form' and site.consultFormEmbed %}
-        <div style="margin-top:var(--space-xl);">
+        <div id="schedule" style="margin-top:var(--space-xl);">
           <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);">Consultation Request</p>
           <!-- [[TODO: embed HIPAA Jotform at site.consultFormEmbed when mode switches to form]] -->
         </div>
@@ -75,6 +75,14 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
       </div>
 
       <div class="fade-up">
+        <img
+          src="/assets/photos/handshake_bonita-2023_791x609.jpg"
+          alt="Dr. Pasicznyk greeting a patient at Foundation Dental Center"
+          class="content-photo"
+          width="791" height="609"
+          loading="lazy"
+          style="margin-bottom:var(--space-lg);"
+        />
         <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Location</p>
         <address style="font-size:1rem;line-height:1.8;margin-bottom:var(--space-md);">
           <strong>{{ site.name }}</strong><br />
@@ -82,10 +90,16 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
           {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}
         </address>
         <a href="{{ site.directionsUrl }}" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-bottom:var(--space-lg);">Get Directions</a>
-        <div class="location-map-placeholder" style="margin-top:var(--space-md);">
-          <!-- [[TODO: embed Google Map or static map image]] -->
-          Map placeholder
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.4!2d-81.7929!3d26.3253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE5JzMxLjEiTiA4McKwNDcnMzQuNCJX!5e0!3m2!1sen!2sus!4v1698014400000!5m2!1sen!2sus"
+          title="Foundation Dental Center map"
+          width="100%"
+          height="280"
+          style="border:0;border-radius:var(--radius-lg);display:block;margin-top:var(--space-md);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <div style="margin-top:var(--space-lg);padding:var(--space-md);background:var(--ivory);border-radius:var(--radius-lg);">
           <p style="font-size:0.875rem;color:var(--mid-gray);margin:0;">Serving Bonita Springs, Naples, Fort Myers, Estero, and Southwest Florida.</p>
         </div>

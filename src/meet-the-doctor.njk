@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 pageTitle: "Meet Dr. John Pasicznyk, DDS | Foundation Dental Center — Bonita Springs, FL"
-pageDesc: "Dr. John Pasicznyk, DDS is the founder of Foundation Dental Center in Bonita Springs, FL, specializing in implant and restorative dentistry."
+pageDesc: "Dr. John Pasicznyk is the founder of Foundation Dental Center in Bonita Springs, FL. Implant surgeon, restorative dentist, and teacher of implant surgery."
 pageSchemaExtra: |
   {
     "@context": "https://schema.org",
@@ -28,9 +28,9 @@ pageSchemaExtra: |
     <div class="hero-content">
       <span class="eyebrow">Meet the Doctor</span>
       <h1 id="page-heading">{{ site.doctor }}</h1>
-      <p class="hero-subhead">Founder of Foundation Dental Center. Implant and restorative dentist. Bonita Springs, FL.</p>
+      <p class="hero-subhead">Founder of Foundation Dental Center. Implant surgeon and restorative dentist. Teacher of implant surgery.</p>
       <div class="hero-actions">
-        <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+        <a href="/contact#schedule" class="btn-primary btn-lg">Schedule a Consultation</a>
       </div>
     </div>
   </div>
@@ -40,17 +40,45 @@ pageSchemaExtra: |
   <div class="container content-split">
     <div class="fade-up">
       <span class="eyebrow">Background</span>
-      <h2 id="bio-heading">Education &amp; Training</h2>
+      <h2 id="bio-heading">Education, Teaching &amp; Training</h2>
       <span class="gold-rule"></span>
-      <p>{{ site.doctorName }} earned his Doctor of Dental Surgery degree from {{ site.doctorSchool }}. Following graduation, he concentrated his focus on implant dentistry and complex restorative cases — the intersection of surgical precision and aesthetic outcome.</p>
-      <p>He founded Foundation Dental Center with a specific mission: to provide patients who have lost teeth — or who face losing them — with a thorough, honest, unhurried process that puts their goals first.</p>
+      <p>Dr. John Pasicznyk earned his Doctor of Dental Surgery degree from Indiana University School of Dentistry. He has built his career around implant surgery and full-arch reconstruction — the cases where planning, surgery, and the final teeth all have to come together.</p>
+      <p>He has served as faculty and mentor with 3D Dentists and Implant Pathway, where he teaches implant surgery to practicing dentists. He is a clinical advisor to Dentsply Sirona on same-day chairside CAD/CAM and 3D cone-beam imaging, and took part in the clinical validation of CEREC Tessera, a same-day ceramic restoration material.</p>
+      <p>At Foundation, he does not hand cases off. The doctor who plans your treatment is the doctor who performs your surgery and restores your final teeth.</p>
+
+      <div class="credentials-list fade-up" style="margin-top:var(--space-lg);">
+        <ul style="display:flex;flex-direction:column;gap:0.875rem;">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>DDS, Indiana University School of Dentistry</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Faculty and mentor, 3D Dentists and Implant Pathway</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Clinical advisor, Dentsply Sirona</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Zygomatic implant surgery</span>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Surgery with board-certified MD anesthesiologists</span>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="fade-up">
-      <div class="photo-placeholder" style="min-height:440px;">
-        <!-- [[TODO: professional headshot — Dr. Pasicznyk]] -->
-        <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="color:var(--light-gray)"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-        <span>[[TODO: doctor headshot]]</span>
-      </div>
+      <img
+        src="/assets/photos/04_operatory_navy-blazer_4x5.jpg"
+        alt="Dr. Pasicznyk in the operatory at Foundation Dental Center"
+        class="content-photo content-photo-portrait"
+        width="800" height="1000"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>
@@ -64,7 +92,7 @@ pageSchemaExtra: |
         <span class="gold-rule"></span>
         <p>Dr. Pasicznyk's philosophy is reflected in the practice's name. A Foundation is not cosmetic — it is structural. Every treatment plan is built around the biology of the patient, the mechanics of the bite, and the long-term durability of the result.</p>
         <p>"I founded this practice because I believe patients who have lost teeth deserve someone who will take the time to understand their situation — not fit them into a protocol."</p>
-        <p style="color:var(--mid-gray);font-size:0.875rem;margin-top:0.25rem;">— {{ site.doctor }}</p>
+        <p style="color:var(--mid-gray);font-size:0.875rem;margin-top:0.25rem;">— Dr. Pasicznyk</p>
       </div>
       <div class="fade-up">
         <span class="eyebrow">Practice Focus</span>
@@ -89,7 +117,7 @@ pageSchemaExtra: |
           </li>
           <li style="display:flex;gap:0.75rem;align-items:flex-start;">
             <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            <span>IV sedation for patient comfort</span>
+            <span>IV sedation by a board-certified MD anesthesiologist</span>
           </li>
           <li style="display:flex;gap:0.75rem;align-items:flex-start;">
             <svg width="20" height="20" style="color:var(--gold);flex-shrink:0;margin-top:2px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
@@ -101,13 +129,35 @@ pageSchemaExtra: |
   </div>
 </section>
 
+<section class="section-white" aria-labelledby="doctor-photo-2">
+  <div class="container content-split reverse">
+    <div class="fade-up">
+      <img
+        src="/assets/photos/05_operatory_white-coat_crop-no-logo_4x5.jpg"
+        alt="Dr. Pasicznyk in the operatory"
+        class="content-photo content-photo-portrait"
+        width="800" height="1000"
+        loading="lazy"
+      />
+    </div>
+    <div class="fade-up">
+      <span class="eyebrow">Your Care, Coordinated</span>
+      <h2 id="doctor-photo-2">One Doctor. Your Whole Plan.</h2>
+      <span class="gold-rule"></span>
+      <p>Dr. Pasicznyk personally plans every case and performs every surgery. Your care is coordinated from consultation through your final restoration — no handoffs, no surprises.</p>
+      <p>When you come in for a consultation, you are meeting the doctor who will know your case inside and out, from the first scan to the final placement.</p>
+      <a href="/contact#schedule" class="btn-primary" style="margin-top:var(--space-md);">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
 <section class="cta-section" aria-labelledby="cta-mtd">
   <div class="container fade-up">
     <span class="eyebrow" style="color:var(--gold)">Ready to Meet in Person?</span>
     <h2 id="cta-mtd">Schedule a Consultation with Dr. Pasicznyk</h2>
     <p>The consultation is where we start — no pressure, just a real conversation about your situation.</p>
     <div class="cta-actions">
-      <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+      <a href="/contact#schedule" class="btn-primary btn-lg">Schedule a Consultation</a>
       <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
     </div>
   </div>

@@ -29,7 +29,8 @@
         </ul>
       </nav>
 
-      <a href="/contact" class="btn-outline nav-cta">Schedule a Consultation</a>
+      <a href="tel:{{ site.phoneRaw }}" class="nav-phone" aria-label="Call {{ site.phone }}">{{ site.phone }}</a>
+      <a href="/contact#schedule" class="btn-outline nav-cta">Schedule a Consultation</a>
 
       <button class="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
@@ -51,7 +52,7 @@
       <li><a href="/meet-the-doctor">Meet Dr. Pasicznyk</a></li>
       <li><a href="/about">About the Practice</a></li>
       <li><a href="/faq">FAQ</a></li>
-      <li><a href="/contact" class="btn-primary mobile-cta">Schedule a Consultation</a></li>
+      <li><a href="/contact#schedule" class="btn-primary mobile-cta">Schedule a Consultation</a></li>
     </ul>
     <p class="mobile-contact">
       <a href="tel:{{ site.phoneRaw }}">{{ site.phone }}</a>
