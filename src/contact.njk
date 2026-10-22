@@ -9,7 +9,7 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
     <div class="hero-content">
       <span class="eyebrow">Contact Us</span>
       <h1 id="page-heading">Let's Start a Conversation</h1>
-      <p class="hero-subhead">The first step is simply reaching out. Call or email — we'll get you scheduled and answer any questions you have before your appointment.</p>
+      <p class="hero-subhead">Schedule online below, call us, or send an email — whichever is easiest. We'll confirm your appointment and answer any questions before you come in.</p>
     </div>
   </div>
 </section>
@@ -52,7 +52,16 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
         {% if site.bookingMode == 'websched' and site.webSchedUrl %}
         <div style="margin-top:var(--space-xl);">
           <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);">Schedule Online</p>
-          <!-- [[TODO: embed Open Dental scheduler at site.webSchedUrl when mode switches to websched]] -->
+          <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:var(--space-md);">Prefer to book online? Choose a time below — or call us at <a href="tel:{{ site.phoneRaw }}" style="color:var(--navy);font-weight:600;">{{ site.phone }}</a> if you'd rather talk first.</p>
+          <iframe
+            src="{{ site.webSchedUrl }}"
+            title="Schedule an appointment online"
+            width="100%"
+            height="680"
+            style="border:1px solid var(--color-border);border-radius:var(--radius-lg);display:block;"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          ></iframe>
         </div>
         {% endif %}
 
