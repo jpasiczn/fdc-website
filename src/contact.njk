@@ -60,16 +60,12 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
         {% if site.bookingMode == 'websched' and site.webSchedUrl %}
         <div id="schedule" style="margin-top:var(--space-xl);">
           <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);">Schedule Online</p>
-          <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:var(--space-md);">Prefer to book online? Choose a time below — or call us at <a href="tel:{{ site.phoneRaw }}" style="color:var(--navy);font-weight:600;">{{ site.phone }}</a> if you'd rather talk first.</p>
-          <iframe
-            src="{{ site.webSchedUrl }}"
-            title="Schedule an appointment online"
-            width="100%"
-            height="680"
-            style="border:1px solid var(--color-border);border-radius:var(--radius-lg);display:block;"
-            loading="lazy"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-          ></iframe>
+          <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:var(--space-md);">Choose a time that works for you — or call us at <a href="tel:{{ site.phoneRaw }}" style="color:var(--navy);font-weight:600;">{{ site.phone }}</a> if you'd rather talk first.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-sm);align-items:center;">
+            <a href="{{ site.webSchedUrl }}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-lg">Book Your Consultation</a>
+            <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
+          </div>
+          <p style="margin-top:var(--space-sm);font-size:0.8125rem;color:var(--mid-gray);">Opens in a new tab. Choose a time, then we'll confirm your appointment.</p>
         </div>
         {% endif %}
 
