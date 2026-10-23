@@ -71,13 +71,16 @@ Items below are data-gated: the component is built and live but renders only whe
 ```json
 {
   "fullArch": "Full-arch cases typically range from $X to $Y per arch, depending on bone volume and prosthesis type.",
+  "anesthesia": "Anesthesia fees are separate from surgical fees and depend on procedure length…",
   "financing": [
     { "name": "CareCredit", "url": "https://www.carecredit.com", "logo": "" },
     { "name": "Sunbit", "url": "https://sunbit.com", "logo": "" }
-  ]
+  ],
+  "showCostTier": false
 }
 ```
-**Appears on:** /full-arch-fixed (FAQ block, cost answer), /faq  
+**Appears on:** /full-arch-fixed (FAQ block), /faq, /anesthesia (FAQ block)  
+**Cost-tier row** on comparison table: set `"showCostTier": true` to show $$ vs $$$ row on `/full-arch-fixed` and `/implant-dentures`  
 **Note:** Florida dental advertising rules apply — no "as low as" framing without the full disclosure.
 
 ---
@@ -103,11 +106,14 @@ Items below are data-gated: the component is built and live but renders only whe
 {
   "memberships": ["American Dental Association", "…"],
   "fellowships": ["…"],
-  "yearsExperience": "18"
+  "yearsExperience": "18",
+  "zygomaticExperience": "Over X zygomatic implant cases placed",
+  "zygomaticRecovery": "<p>Recovery paragraph(s) about zygomatic implant timeline, swelling, diet restrictions, etc.</p>"
 }
 ```
-**Appears on:** /meet-the-doctor (credentials list)  
-**To add:** Edit `src/meet-the-doctor.njk` to render these fields conditionally once confirmed.
+**Appears on:** /meet-the-doctor (credentials), /zygomatic-implants (experience line, recovery section)  
+**`zygomaticExperience`**: short claim line rendered in the experience block on the zygomatic page  
+**`zygomaticRecovery`**: HTML string with paragraph(s) about recovery timeline; rendered via `| safe`
 
 ---
 
@@ -143,6 +149,25 @@ Items below are data-gated: the component is built and live but renders only whe
 
 ---
 
+### J. Team Section (About Page)
+**File:** `src/_data/siteContent/team.json`  
+**Format:**
+```json
+{
+  "members": [
+    {
+      "name": "First Last",
+      "role": "Dental Assistant",
+      "photo": "/assets/photos/team/first-last.jpg"
+    }
+  ]
+}
+```
+**Appears on:** /about ("Who You'll Meet" section)  
+**Note:** Photo optional — card renders without it. No last names required if team member prefers first only.
+
+---
+
 ## LOW PRIORITY
 
 ### I. "Formerly Britely" Footer / About Line
@@ -162,8 +187,31 @@ Items below are data-gated: the component is built and live but renders only whe
 ### Form Routing (Lead Capture)
 **File:** `functions/api/contact.js`  
 **Action needed:** Configure email/CRM delivery. Current stub logs submissions but does not deliver them.  
+**Flag:** `"showLeadForm": false` in `src/_data/site.json` — set to `true` only after routing is wired.  
 **Recommended:** Cloudflare Email Workers, Resend, or Mailgun. See inline comments in the file.  
-**Appears on:** /contact, /full-arch-fixed, homepage
+**Appears on:** /contact, /full-arch-fixed, homepage (all behind `showLeadForm` flag)
+
+---
+
+### Open Dental API Integration (Lead Form → CRM)
+**Goal:** When a visitor submits the lead form, create or find their patient record in Open Dental and log the inquiry as a commlog entry.
+
+**What to build:** A Cloudflare Pages Function at `functions/api/contact.js` (stub exists) that:
+1. Validates `name` and `phone` from form POST
+2. Calls Open Dental REST API: `GET /api/v1/patients?phoneSearch={phone}` to find existing patient, or `POST /api/v1/patients` to create one
+3. Calls `POST /api/v1/commlog` with the patient's `PatNum`, a `CommType` of your choosing (e.g. "WebLead"), and the form message as `Note`
+
+**Open Dental requirements to enable:**
+- Enable the REST API in Open Dental: Tools → Programs → Open Dental Service → check "REST API Enabled"
+- Generate an API key: API → Generate Developer Key (stored only as a Cloudflare secret, never in code)
+- Confirm your server's LAN/WAN address and port (default 8612) or cloud hosted URL
+- Create a commlog type (or use an existing one) for web leads
+
+**Cloudflare secrets needed** (set via `wrangler secret put` or dashboard):
+- `OD_API_URL` — e.g. `https://your-od-server:8612`
+- `OD_API_KEY` — the developer key from Open Dental
+
+**Note:** HIPAA applies. No PHI in Cloudflare logs. The API key grants wide access — rotate it if leaked.
 
 ---
 

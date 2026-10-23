@@ -59,7 +59,7 @@ pageDesc: "Replace an entire arch of teeth with fixed, non-removable implants. F
       </div>
       <div class="card fade-up">
         <h3>Natural Appearance</h3>
-        <p>Modern full-arch prostheses are designed to complement your facial structure and look completely natural.</p>
+        <p>Modern full-arch prostheses are designed to complement your facial structure and look natural.</p>
       </div>
     </div>
   </div>
@@ -269,8 +269,23 @@ pageDesc: "Replace an entire arch of teeth with fixed, non-removable implants. F
   </div>
 </section>
 
+<!-- Comparison table -->
+<section class="section-white" aria-labelledby="compare-fa-heading">
+  <div class="container">
+    <div class="fade-up" style="max-width:680px;">
+      <span class="eyebrow">Compare Your Options</span>
+      <h2 id="compare-fa-heading" class="section-heading">Fixed Implants vs. Snap-In Denture</h2>
+      <span class="gold-rule"></span>
+      <p>Both use implants. The key difference is whether the prosthesis stays in permanently or is removed for cleaning.</p>
+    </div>
+    {% include "comparison-table.njk" %}
+    <p class="fade-up" style="margin-top:var(--space-md);font-size:0.875rem;color:var(--mid-gray);">{{ site.doctorName }} will walk you through both options and recommend what fits your anatomy and goals.</p>
+  </div>
+</section>
+
 <!-- Lead form -->
-<section class="section-white" aria-labelledby="lead-fa-heading">
+{% if site.showLeadForm %}
+<section class="section-light" aria-labelledby="lead-fa-heading">
   <div class="container">
     <div style="max-width:620px;margin-inline:auto;">
       <h2 id="lead-fa-heading" class="section-heading fade-up" style="text-align:center;">Ready to Start a Conversation?</h2>
@@ -278,6 +293,7 @@ pageDesc: "Replace an entire arch of teeth with fixed, non-removable implants. F
     </div>
   </div>
 </section>
+{% endif %}
 
 <section class="cta-section" aria-labelledby="cta-full-arch">
   <div class="container fade-up">

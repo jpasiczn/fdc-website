@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "dev": "npx @11ty/eleventy --serve --watch"
+    "dev": "npx @11ty/eleventy --serve --watch",
+    "check:placeholders": "node scripts/check-placeholders.js",
+    "build:check": "npx @11ty/eleventy && node scripts/check-placeholders.js"
   },
   "repository": {
     "type": "git",

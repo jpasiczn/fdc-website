@@ -41,6 +41,7 @@
   "consultFormEmbed": "",
 
   "freeConsultOffer": false,
+  "showLeadForm": false,
   "showTestimonials": false,
   "showBeforeAfter": false,
   "analyticsEnabled": false,

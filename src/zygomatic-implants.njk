@@ -11,7 +11,7 @@ pageDesc: "Zygomatic implants are anchored in the cheekbone, providing a solutio
       <h1 id="page-heading">When the Jaw Isn't Enough, the Cheekbone Is</h1>
       <p class="hero-subhead">Zygomatic implants extend into the dense bone of the cheekbone (zygoma), providing a stable foundation for upper-arch teeth even when the jawbone has significant volume loss.</p>
       <div class="hero-actions">
-        <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+        <a href="/contact#schedule" class="btn-primary btn-lg">Book Online or Call</a>
         <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
       </div>
     </div>
@@ -25,7 +25,7 @@ pageDesc: "Zygomatic implants are anchored in the cheekbone, providing a solutio
       <h2 id="what-heading">A Solution for Severe Upper-Jaw Bone Loss</h2>
       <span class="gold-rule"></span>
       <p>Standard implants require adequate jawbone volume. When the upper jaw has suffered severe bone loss — due to long-term denture wear, failed previous implants, or prolonged tooth loss — conventional implants may not be possible without extensive grafting.</p>
-      <p>Zygomatic implants bypass this limitation. Longer than standard implants, they anchor in the zygomatic bone (cheekbone), which retains its density regardless of what has happened to the jaw. This allows full-arch restoration in patients who might otherwise be told they are not implant candidates.</p>
+      <p>Zygomatic implants bypass this limitation. Longer than standard implants, they anchor in the zygomatic bone (cheekbone), which typically retains adequate density even when the jaw has experienced significant bone loss. This allows full-arch restoration in patients who might otherwise be told they are not implant candidates.</p>
     </div>
     <div class="fade-up">
       <img src="/assets/photos/zygomatic.jpg"
@@ -48,13 +48,48 @@ pageDesc: "Zygomatic implants are anchored in the cheekbone, providing a solutio
   </div>
 </section>
 
+{% if siteContent.bio and siteContent.bio.zygomaticExperience %}
+<section class="section-white" aria-labelledby="zyg-exp-heading">
+  <div class="container">
+    <div class="fade-up" style="max-width:680px;padding:var(--space-lg);background:var(--ivory);border-radius:var(--radius-lg);">
+      <span class="eyebrow">Experience</span>
+      <h2 id="zyg-exp-heading" style="font-family:var(--font-serif);font-size:clamp(1.25rem,2.5vw,1.75rem);margin-top:var(--space-xs);margin-bottom:var(--space-sm);">{{ siteContent.bio.zygomaticExperience }}</h2>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if siteContent.bio and siteContent.bio.zygomaticRecovery %}
+<section class="section-light" aria-labelledby="zyg-recovery-heading">
+  <div class="container">
+    <div class="fade-up" style="max-width:680px;">
+      <span class="eyebrow">After Surgery</span>
+      <h2 id="zyg-recovery-heading" class="section-heading">Recovery &amp; What to Expect</h2>
+      <span class="gold-rule"></span>
+      <div class="prose">{{ siteContent.bio.zygomaticRecovery | safe }}</div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section-white" aria-labelledby="zyg-scan-heading">
+  <div class="container">
+    <div class="fade-up" style="max-width:680px;padding:var(--space-lg);border:1px solid var(--color-border);border-radius:var(--radius-lg);">
+      <span class="eyebrow">Second Opinion or Referral?</span>
+      <h2 id="zyg-scan-heading" style="font-family:var(--font-serif);font-size:clamp(1.25rem,2.5vw,1.75rem);margin-top:var(--space-xs);margin-bottom:var(--space-sm);">Already Have a 3D Scan from Another Office?</h2>
+      <p>{{ site.doctorName }} can review existing imaging as part of your consultation. Call us to discuss your records and arrange a review.</p>
+      <a href="tel:{{ site.phoneRaw }}" class="btn-outline" style="margin-top:var(--space-md);display:inline-flex;">{{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+
 <section class="cta-section" aria-labelledby="cta-zyg">
   <div class="container fade-up">
     <span class="eyebrow" style="color:var(--gold)">There May Be a Path Forward</span>
     <h2 id="cta-zyg">Even If You've Been Turned Away Before</h2>
     <p>Severe bone loss doesn't always mean implants aren't possible. A consultation and imaging study gives you a definitive answer.</p>
     <div class="cta-actions">
-      <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+      <a href="/contact#schedule" class="btn-primary btn-lg">Book Online or Call</a>
       <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
     </div>
   </div>
