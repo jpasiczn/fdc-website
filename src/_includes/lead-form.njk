@@ -1,0 +1,65 @@
+<div class="lead-form-wrap fade-up">
+  <p class="lead-form-eyebrow">Outside Office Hours?</p>
+  <p class="lead-form-desc">Leave your info and we'll call you the next business day.</p>
+  <form class="lead-form" id="lead-form" action="/api/contact" method="POST" novalidate>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="lead-name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="lead-name" name="name" required autocomplete="name" placeholder="Your name" />
+      </div>
+      <div class="form-group">
+        <label for="lead-phone">Phone <span aria-hidden="true">*</span></label>
+        <input type="tel" id="lead-phone" name="phone" required autocomplete="tel" placeholder="(239) 000-0000" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lead-inquiry">What brings you in? <span class="form-optional">(optional)</span></label>
+      <select id="lead-inquiry" name="inquiryType">
+        <option value="">Select an option</option>
+        <option value="full-arch">Full-arch implants</option>
+        <option value="single-implant">Single or multiple implants</option>
+        <option value="implant-denture">Implant denture</option>
+        <option value="bone-grafting">Bone grafting</option>
+        <option value="zygomatic">Zygomatic implants</option>
+        <option value="restorative">Restorative dentistry</option>
+        <option value="other">Other / not sure yet</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="lead-message">Anything else? <span class="form-optional">(optional)</span></label>
+      <textarea id="lead-message" name="message" rows="3" placeholder="Additional notes…"></textarea>
+    </div>
+    <button type="submit" class="btn-primary lead-form-submit">Send Message</button>
+    <p class="form-privacy">We'll call you back. No spam, no sharing your info.</p>
+  </form>
+  <div class="lead-form-success" id="lead-form-success" hidden>
+    <p>Thanks — we'll call you the next business day. Or reach us now: <a href="tel:{{ site.phoneRaw }}">{{ site.phone }}</a>.</p>
+  </div>
+</div>
+<script>
+(function () {
+  var form = document.getElementById('lead-form');
+  if (!form) return;
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      var res = await fetch('/api/contact', { method: 'POST', body: new FormData(form) });
+      if (res.ok) {
+        form.hidden = true;
+        document.getElementById('lead-form-success').hidden = false;
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        alert('Something went wrong — please call us directly.');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      alert('Something went wrong — please call us directly.');
+    }
+  });
+})();
+</script>

@@ -11,7 +11,7 @@ pageDesc: "Replace an entire arch of teeth with fixed, non-removable implants. F
       <h1 id="page-heading">A Complete Arch. Fixed. Built to Stay.</h1>
       <p class="hero-subhead">For patients who have lost most or all of their upper or lower teeth — a full set of fixed, non-removable teeth supported by implants can restore function, aesthetics, and confidence in ways no denture can.</p>
       <div class="hero-actions">
-        <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+        <a href="/contact#schedule" class="btn-primary btn-lg">Book Online or Call</a>
         <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
       </div>
     </div>
@@ -80,6 +80,202 @@ pageDesc: "Replace an entire arch of teeth with fixed, non-removable implants. F
            class="content-photo"
            width="800" height="600" loading="lazy" />
     </div>
+    <div class="fade-up" style="margin-top:var(--space-xl);padding:var(--space-lg);background:var(--ivory);border-radius:var(--radius-lg);max-width:680px;">
+      <p style="font-weight:600;font-size:0.9375rem;">Told you don't have enough bone?</p>
+      <p style="margin-top:0.5rem;">Severe upper-jaw bone loss doesn't always disqualify you. <a href="/zygomatic-implants" style="color:var(--navy);font-weight:600;">Zygomatic implants</a> anchor in the cheekbone instead of the jaw — extending candidacy for many patients who were turned away elsewhere.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Process: Your Path to Fixed Teeth -->
+<section class="section-light" aria-labelledby="process-fa-heading">
+  <div class="container">
+    <div class="process-split">
+      <div class="process-left">
+        <div class="fade-up" style="max-width:580px;">
+          <span class="eyebrow">What to Expect</span>
+          <h2 id="process-fa-heading" class="section-heading">Your Path to Fixed Teeth</h2>
+          <span class="gold-rule"></span>
+          <p>We don't hand you a treatment plan on the first call. We start with a conversation.</p>
+        </div>
+        <div class="steps" style="margin-top:var(--space-xl);">
+          <div class="step fade-up">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div>
+              <h3>Consultation</h3>
+              <p>Meet {{ site.doctorName }} — the same doctor who will perform your surgery and restore your teeth. Talk through your goals, history, and budget. No pressure, no upsell.</p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div>
+              <h3>Imaging &amp; Planning</h3>
+              <p>3D cone-beam imaging shows your bone and anatomy precisely. Every implant position is planned digitally, and you review the plan and the fee before anything is scheduled.</p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div>
+              <h3>Treatment Day</h3>
+              <p>A board-certified MD anesthesiologist provides your IV sedation or general anesthesia. For many full-arch patients, a fixed set of provisional teeth goes in the same day.</p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-number" aria-hidden="true">4</div>
+            <div>
+              <h3>Healing &amp; Final Teeth</h3>
+              <p>Over a few months, the implants fuse with your bone. Then your final teeth are made and placed.</p>
+            </div>
+          </div>
+        </div>
+        <p class="fade-up" style="margin-top:var(--space-lg);font-size:0.9375rem;color:var(--mid-gray);font-style:italic;">Here for the season? We'll map your treatment around your time in Florida. Bring your dates to your consultation.</p>
+      </div>
+      <div class="process-right fade-up">
+        <img
+          src="/assets/photos/wide_reviewing-CBCT_2022_1647x657.jpg"
+          alt="Dr. Pasicznyk reviewing a 3D cone-beam scan with a patient"
+          class="content-photo"
+          width="1647" height="657"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MD Anesthesiologist -->
+<section class="section-white" aria-labelledby="anesthesia-fa-heading">
+  <div class="container">
+    <div class="fade-up" style="max-width:680px;">
+      <span class="eyebrow">Your Comfort</span>
+      <h2 id="anesthesia-fa-heading" class="section-heading">An MD Anesthesiologist in the Room</h2>
+      <span class="gold-rule"></span>
+    </div>
+    <div class="fade-up" style="margin-top:var(--space-lg);padding:var(--space-xl);background:var(--ivory);border-radius:var(--radius-lg);max-width:780px;">
+      <p>For full-arch surgery, most patients choose IV sedation or general anesthesia — so a board-certified MD anesthesiologist is in the room for your entire procedure. Their only job is your comfort and safety: monitoring your breathing, heart rate, and oxygen from start to finish, so {{ site.doctorName }} can focus completely on your surgery.</p>
+      <p style="margin-top:var(--space-md);">You'll discuss your sedation options at your consultation. Most patients remember little of surgery day.</p>
+      <a href="/anesthesia" class="btn-outline" style="margin-top:var(--space-md);display:inline-flex;">Learn About Anesthesia Options</a>
+    </div>
+    {% if siteContent.anesthesiologist and siteContent.anesthesiologist.name %}
+    <div class="fade-up" style="margin-top:var(--space-lg);padding:var(--space-lg);border:1px solid var(--color-border);border-radius:var(--radius-lg);max-width:420px;">
+      {% if siteContent.anesthesiologist.photo %}
+      <img src="{{ siteContent.anesthesiologist.photo }}" alt="{{ siteContent.anesthesiologist.name }}" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:var(--space-sm);" loading="lazy" width="80" height="80" />
+      {% endif %}
+      <p style="font-weight:600;font-family:var(--font-serif);font-size:1.125rem;">{{ siteContent.anesthesiologist.name }}</p>
+      <p style="font-size:0.875rem;color:var(--mid-gray);">{{ siteContent.anesthesiologist.credentials }}</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Testimonials (conditional) -->
+{% if site.showTestimonials and siteContent.testimonials and siteContent.testimonials.length %}
+<section class="section-light" aria-labelledby="testimonials-fa-heading">
+  <div class="container">
+    <div class="fade-up text-center" style="max-width:640px;margin-inline:auto;">
+      <span class="eyebrow">Patient Stories</span>
+      <h2 id="testimonials-fa-heading" class="section-heading">What Patients Say</h2>
+      <span class="gold-rule" style="margin-inline:auto;"></span>
+    </div>
+    {% include "testimonials.njk" %}
+  </div>
+</section>
+{% endif %}
+
+<!-- Before/After teaser (conditional) -->
+{% if site.showBeforeAfter and siteContent.gallery and siteContent.gallery.length %}
+<section class="section-white" aria-labelledby="gallery-fa-heading">
+  <div class="container">
+    <div class="fade-up text-center" style="max-width:640px;margin-inline:auto;">
+      <span class="eyebrow">Patient Outcomes</span>
+      <h2 id="gallery-fa-heading" class="section-heading">Before &amp; After</h2>
+      <span class="gold-rule" style="margin-inline:auto;"></span>
+    </div>
+    <div class="gallery-grid" style="margin-top:var(--space-xl);">
+      {% for item in siteContent.gallery | slice(0, 3) %}
+      <div class="gallery-item fade-up">
+        <div class="gallery-pair">
+          <div>
+            <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mid-gray);margin-bottom:0.5rem;">Before</p>
+            <img src="{{ item.before }}" alt="" loading="lazy" style="width:100%;border-radius:var(--radius-md);" />
+          </div>
+          <div>
+            <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mid-gray);margin-bottom:0.5rem;">After</p>
+            <img src="{{ item.after }}" alt="" loading="lazy" style="width:100%;border-radius:var(--radius-md);" />
+          </div>
+        </div>
+        {% if item.caption %}<p style="font-size:0.875rem;color:var(--mid-gray);margin-top:0.5rem;">{{ item.caption }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <p class="fade-up" style="margin-top:var(--space-md);font-size:0.8125rem;color:var(--mid-gray);text-align:center;">Individual results vary. Photos shared with patient consent.</p>
+  </div>
+</section>
+{% endif %}
+
+<!-- Short FAQ block -->
+<section class="section-light" aria-labelledby="faq-fa-heading">
+  <div class="container">
+    <div class="fade-up" style="max-width:680px;">
+      <span class="eyebrow">Common Questions</span>
+      <h2 id="faq-fa-heading" class="section-heading">What People Ask Before Getting Started</h2>
+      <span class="gold-rule"></span>
+    </div>
+    <div class="faq-list" style="margin-top:var(--space-lg);max-width:720px;" role="list">
+
+      <div class="faq-item fade-up" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="fa-faq-1">
+          How much does full-arch treatment cost?
+        </button>
+        <div id="fa-faq-1" class="faq-answer">
+          <p>It depends on how many arches, whether you need bone grafting, and the type of final teeth you choose. We don't quote fees over the phone — an accurate number requires a 3D scan and an exam. After your consultation and planning, you'll receive a written treatment plan with your full fee before anything is scheduled.</p>
+          {% if siteContent.pricing and siteContent.pricing.fullArch %}
+          <p style="margin-top:var(--space-sm);">{{ siteContent.pricing.fullArch }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="faq-item fade-up" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="fa-faq-2">
+          How long does the process take?
+        </button>
+        <div id="fa-faq-2" class="faq-answer">
+          <p>Full-arch cases can involve a same-day provisional set of teeth, with final restorations placed after osseointegration is complete — usually several months later. Your timeline will be outlined during the planning process. Seasonal residents: bring your dates to your consultation.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="fa-faq-3">
+          Will it hurt?
+        </button>
+        <div id="fa-faq-3" class="faq-answer">
+          <p>You should not feel pain during surgery. Every procedure uses local anesthesia, and most full-arch patients choose IV sedation or general anesthesia provided by a board-certified MD anesthesiologist — so they're deeply relaxed or fully asleep. Some soreness afterward is normal and is usually managed with over-the-counter medication.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="fa-faq-4">
+          Does insurance cover it?
+        </button>
+        <div id="fa-faq-4" class="faq-answer">
+          <p>We file your insurance claims for you. We don't accept assignment of benefits, meaning payment is due at the time of service and your insurer reimburses you directly. Our team can help estimate your coverage before treatment begins.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="fade-up" style="margin-top:var(--space-lg);">
+      <a href="/faq" class="btn-outline">See All Frequently Asked Questions</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lead form -->
+<section class="section-white" aria-labelledby="lead-fa-heading">
+  <div class="container">
+    <div style="max-width:620px;margin-inline:auto;">
+      <h2 id="lead-fa-heading" class="section-heading fade-up" style="text-align:center;">Ready to Start a Conversation?</h2>
+      {% include "lead-form.njk" %}
+    </div>
   </div>
 </section>
 
@@ -87,9 +283,9 @@ pageDesc: "Replace an entire arch of teeth with fixed, non-removable implants. F
   <div class="container fade-up">
     <span class="eyebrow" style="color:var(--gold)">Next Step</span>
     <h2 id="cta-full-arch">Ready to Learn If This Is Right for You?</h2>
-    <p>Call us to schedule a consultation with {{ site.doctorName }}. We'll review your situation, answer your questions, and outline a path forward.</p>
+    <p>Book online or call us. We'll review your situation, answer your questions, and outline a path forward.</p>
     <div class="cta-actions">
-      <a href="/contact" class="btn-primary btn-lg">Schedule a Consultation</a>
+      <a href="/contact#schedule" class="btn-primary btn-lg">Book Online or Call</a>
       <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
     </div>
   </div>

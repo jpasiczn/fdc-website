@@ -31,6 +31,14 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
             <p style="font-size:0.875rem;color:var(--mid-gray);margin-top:0.25rem;">The quickest way to schedule. We pick up — or call you right back.</p>
           </div>
 
+          {% if site.showTextUs %}
+          <div>
+            <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Text</p>
+            <a href="sms:{{ site.phoneRaw }}" style="font-size:1.375rem;font-family:var(--font-serif);font-weight:500;text-decoration:none;color:var(--navy);">{{ site.phone }}</a>
+            <p style="font-size:0.875rem;color:var(--mid-gray);margin-top:0.25rem;">Text us. We respond during business hours.</p>
+          </div>
+          {% endif %}
+
           <div>
             <p style="font-weight:600;font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Email</p>
             <a href="mailto:{{ site.email }}" style="font-size:1.125rem;font-weight:500;text-decoration:none;color:var(--navy);">{{ site.email }}</a>
@@ -105,6 +113,15 @@ pageDesc: "Schedule a consultation at Foundation Dental Center in Bonita Springs
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="section-light" aria-labelledby="lead-contact-heading">
+  <div class="container">
+    <div style="max-width:620px;margin-inline:auto;">
+      <h2 id="lead-contact-heading" class="section-heading fade-up" style="text-align:center;">Prefer to Leave a Message?</h2>
+      {% include "lead-form.njk" %}
     </div>
   </div>
 </section>

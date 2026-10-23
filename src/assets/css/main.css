@@ -958,6 +958,65 @@ p + p { margin-top: 0.875rem; }
   .card-grid-2x2 { grid-template-columns: 1fr !important; }
 }
 
+/* --- Lead capture form ----------------------------------------- */
+.lead-form-wrap { padding: var(--space-xl); background: var(--ivory); border-radius: var(--radius-lg); }
+.lead-form-eyebrow { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.lead-form-desc { font-size: 0.9375rem; color: var(--mid-gray); margin-bottom: var(--space-lg); }
+.lead-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.lead-form .form-group { display: flex; flex-direction: column; gap: 0.375rem; margin-bottom: var(--space-md); }
+.lead-form .form-group:last-of-type { margin-bottom: 0; }
+.lead-form label { font-family: var(--font-sans); font-size: 0.875rem; font-weight: 500; color: var(--navy); }
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color var(--transition), outline-color var(--transition);
+}
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+.lead-form textarea { resize: vertical; min-height: 80px; }
+.lead-form-submit { margin-top: var(--space-md); }
+.form-optional { color: var(--mid-gray); font-weight: 400; }
+.form-privacy { font-size: 0.8125rem; color: var(--mid-gray); margin-top: var(--space-sm); }
+.lead-form-success { padding: var(--space-lg); text-align: center; background: #eaf5ea; border-radius: var(--radius-md); }
+@media (max-width: 600px) {
+  .lead-form .form-row { grid-template-columns: 1fr; }
+}
+
+/* --- Testimonials ----------------------------------------------- */
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl); }
+.testimonial-card { background: var(--ivory); border-radius: var(--radius-lg); padding: var(--space-lg); }
+.testimonial-quote { font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.65; font-style: italic; color: var(--navy); }
+.testimonial-footer { margin-top: var(--space-md); border-top: 1px solid var(--color-border); padding-top: var(--space-sm); }
+.testimonial-name { font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--navy); }
+.testimonial-type { display: block; font-size: 0.8125rem; color: var(--mid-gray); margin-top: 0.25rem; }
+
+/* --- Credibility stats strip ------------------------------------ */
+.stats-strip { background: var(--navy); padding: var(--space-xl) 0; }
+.stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2xl); }
+.stat-item { text-align: center; }
+.stat-value { display: block; font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; color: var(--gold); line-height: 1; }
+.stat-label { display: block; font-family: var(--font-sans); font-size: 0.875rem; color: var(--light-gray); margin-top: 0.375rem; }
+
+/* --- Before/after gallery --------------------------------------- */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-xl); }
+.gallery-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+
+/* --- Pronunciation guide --------------------------------------- */
+.pronunciation-guide { font-family: var(--font-sans); font-size: 0.9375rem; color: var(--mid-gray); margin-top: 0.5rem; margin-bottom: 0; }
+
+/* --- Prose (story section) ------------------------------------- */
+.prose p { margin-bottom: 1em; }
+.prose p:last-child { margin-bottom: 0; }
+
 /* --- Reduced motion -------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   .fade-up {

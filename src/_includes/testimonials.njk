@@ -1,0 +1,15 @@
+{% if site.showTestimonials and siteContent.testimonials and siteContent.testimonials.length %}
+<div class="testimonials-grid" role="list">
+  {% for t in siteContent.testimonials %}
+  <div class="testimonial-card fade-up" role="listitem">
+    <blockquote>
+      <p class="testimonial-quote">{{ t.quote }}</p>
+      <footer class="testimonial-footer">
+        <strong class="testimonial-name">{{ t.firstName }} {{ t.lastInitial }}.</strong>
+        {% if t.treatment %}<span class="testimonial-type">{{ t.treatment }}</span>{% endif %}
+      </footer>
+    </blockquote>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

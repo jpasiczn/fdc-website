@@ -54,6 +54,22 @@ pageDesc: "Dr. John Pasicznyk plans your case, performs your surgery, and restor
   </div>
 </section>
 
+<!-- CREDIBILITY STATS (conditional on content/bio.json) -->
+{% if siteContent.bio and siteContent.bio.stats and siteContent.bio.stats.length %}
+<section class="stats-strip" aria-label="Practice highlights">
+  <div class="container">
+    <div class="stats-row">
+      {% for stat in siteContent.bio.stats %}
+      <div class="stat-item fade-up">
+        <span class="stat-value">{{ stat.value }}</span>
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- PROBLEM / EMPATHY -->
 <section class="section-light" aria-labelledby="problem-heading">
   <div class="container content-split">
@@ -78,6 +94,20 @@ pageDesc: "Dr. John Pasicznyk plans your case, performs your surgery, and restor
   </div>
 </section>
 
+<!-- TESTIMONIALS (conditional) -->
+{% if site.showTestimonials and siteContent.testimonials and siteContent.testimonials.length %}
+<section class="section-white" aria-labelledby="testimonials-home-heading">
+  <div class="container">
+    <div class="fade-up text-center" style="max-width:640px;margin-inline:auto;">
+      <span class="eyebrow">Patient Stories</span>
+      <h2 id="testimonials-home-heading" class="section-heading">What Patients Say</h2>
+      <span class="gold-rule" style="margin-inline:auto;"></span>
+    </div>
+    {% include "testimonials.njk" %}
+  </div>
+</section>
+{% endif %}
+
 <!-- ABOUT / DOCTOR -->
 <section class="section-white" aria-labelledby="about-heading">
   <div class="container content-split reverse">
@@ -88,7 +118,7 @@ pageDesc: "Dr. John Pasicznyk plans your case, performs your surgery, and restor
       <p>Implant treatment often passes through several hands. At Foundation, one doctor sees it through. Dr. Pasicznyk plans your case, performs your surgery, and restores your final teeth.</p>
       <p>A graduate of {{ site.doctorSchool }}, he has served as faculty and mentor with 3D Dentists and Implant Pathway, teaching implant surgery to other dentists. He is also a clinical advisor to Dentsply Sirona on same-day digital dentistry and 3D cone-beam imaging.</p>
       <p>Your procedure is supported by a board-certified MD anesthesiologist whose only job in the room is your comfort and safety.</p>
-      <a href="/meet-the-doctor" class="btn-outline" style="margin-top:var(--space-md)">Dr. Pasicznyk's Story</a>
+      <a href="/meet-the-doctor" class="btn-outline" style="margin-top:var(--space-md)">Meet Dr. Pasicznyk</a>
     </div>
     <div class="fade-up">
       <img
@@ -186,6 +216,10 @@ pageDesc: "Dr. John Pasicznyk plans your case, performs your surgery, and restor
         <p style="color:var(--light-gray);">IV sedation or general anesthesia, an MD anesthesiologist, and an unhurried process make even complex treatment approachable.</p>
       </div>
     </div>
+    <div class="fade-up" style="margin-top:var(--space-xl);padding:var(--space-lg);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-lg);max-width:680px;margin-inline:auto;">
+      <p style="font-weight:600;color:var(--ivory);font-size:0.9375rem;">Told you don't have enough bone?</p>
+      <p style="margin-top:0.5rem;color:var(--light-gray);">Severe upper-jaw bone loss doesn't always disqualify you. <a href="/zygomatic-implants" style="color:var(--gold);font-weight:600;">Zygomatic implants</a> anchor in the cheekbone and extend candidacy for many patients who were turned away elsewhere.</p>
+    </div>
     <div class="text-center fade-up" style="margin-top:var(--space-xl);">
       <a href="/faq" class="btn-outline" style="border-color:rgba(246,241,231,0.4);color:var(--ivory);">Have Questions? Read Our FAQ</a>
     </div>
@@ -267,6 +301,16 @@ pageDesc: "Dr. John Pasicznyk plans your case, performs your surgery, and restor
         width="1283" height="972"
         loading="lazy"
       />
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section class="section-white" aria-labelledby="lead-home-heading">
+  <div class="container">
+    <div style="max-width:620px;margin-inline:auto;">
+      <h2 id="lead-home-heading" class="section-heading fade-up" style="text-align:center;">Ready to Start a Conversation?</h2>
+      {% include "lead-form.njk" %}
     </div>
   </div>
 </section>

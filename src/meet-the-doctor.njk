@@ -28,6 +28,10 @@ pageSchemaExtra: |
     <div class="hero-content">
       <span class="eyebrow">Meet the Doctor</span>
       <h1 id="page-heading">{{ site.doctor }}</h1>
+      {%- if site.doctorPronunciation %}
+      <p class="pronunciation-guide">Pronounced: <em>{{ site.doctorPronunciation }}</em></p>
+      {%- endif %}
+      <!-- [[FLAG: pronunciation guide — phonetic spelling: set site.doctorPronunciation in src/_data/site.json, e.g. "pah-SIS-nik"]] -->
       <p class="hero-subhead">Founder of Foundation Dental Center. Implant surgeon and restorative dentist. Teacher of implant surgery.</p>
       <div class="hero-actions">
         <a href="/contact#schedule" class="btn-primary btn-lg">Schedule a Consultation</a>
@@ -150,6 +154,19 @@ pageSchemaExtra: |
     </div>
   </div>
 </section>
+
+{% if siteContent.story and siteContent.story.body %}
+<section class="section-light" aria-labelledby="story-heading">
+  <div class="container">
+    <div style="max-width:720px;margin-inline:auto;" class="fade-up">
+      <span class="eyebrow">In His Own Words</span>
+      <h2 id="story-heading">{{ site.doctorName }}'s Story</h2>
+      <span class="gold-rule"></span>
+      <div class="prose">{{ siteContent.story.body | safe }}</div>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <section class="cta-section" aria-labelledby="cta-mtd">
   <div class="container fade-up">
