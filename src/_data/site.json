@@ -37,7 +37,7 @@
   },
 
   "bookingMode": "websched",
-  "webSchedUrl": "https://patientviewer.com/?RSID=3439363631&CID=30&C=1357",
+  "webSchedUrl": "https://patientviewer.com/?RSID=3439363631&CID=30&C=1357&ReturnURL=https://fdcbonita.com/booking-confirmed",
   "consultFormEmbed": "",
 
   "freeConsultOffer": false,

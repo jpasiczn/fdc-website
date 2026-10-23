@@ -6,6 +6,8 @@
   <title>{{ pageTitle if pageTitle else site.name }}</title>
   <meta name="description" content="{{ pageDesc if pageDesc else site.tagline + ' in Bonita Springs, FL.' }}" />
 
+  {% if noindex %}<meta name="robots" content="noindex, nofollow" />{% endif %}
+
   <!-- Canonical -->
   <link rel="canonical" href="{{ site.canonicalDomain }}{{ page.url }}" />
 

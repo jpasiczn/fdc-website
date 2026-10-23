@@ -1,0 +1,20 @@
+---
+layout: base.njk
+pageTitle: "Booking Confirmed | Foundation Dental Center"
+pageDesc: "Your consultation request has been received."
+noindex: true
+---
+
+<section class="hero" style="padding-block:var(--space-2xl);" aria-labelledby="page-heading">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">You're All Set</span>
+      <h1 id="page-heading">You're Booked</h1>
+      <p class="hero-subhead">We'll send a confirmation shortly. If you have any questions before your appointment, call us at <a href="tel:{{ site.phoneRaw }}" style="color:inherit;font-weight:600;">{{ site.phone }}</a>.</p>
+      <div class="hero-actions">
+        <a href="/" class="btn-primary btn-lg">Back to Home</a>
+        <a href="tel:{{ site.phoneRaw }}" class="btn-outline btn-lg">{{ site.phone }}</a>
+      </div>
+    </div>
+  </div>
+</section>
